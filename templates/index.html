@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<h1>E-Commerce Dashboard</h1>
+
+<button onclick="updateData()">Refresh Data</button>
+<div class="dashboard">
+    <div class="card"><h2 id="sales">--</h2><p>Sales</p></div>
+    <div class="card"><h2 id="quantity">--</h2><p>Quantity</p></div>
+    <div class="card"><h2 id="profit">--</h2><p>Profit</p></div>
+</div>
+
+<div class="dashboard">
+    <div class="card"><canvas id="chart1"></canvas></div>
+    <div class="card"><canvas id="chart2"></canvas></div>
+    <div class="card"><canvas id="chart3"></canvas></div>
+</div>
+<div class="upload-panel">
+
+    <button id="uploadBtn">Upload Image</button>
+
+    <div class="paste-box" id="uploadBox" tabindex="0">
+        <p>Paste Image</p>
+        <img id="preview">
+        <input type="file" id="imageUpload" hidden>
+    </div>
+
+    <button id="searchBtn" onclick="uploadImage()">Search</button>
+    <div id="results" class="top-result"></div>
+
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>   
+</body>
+</html>
