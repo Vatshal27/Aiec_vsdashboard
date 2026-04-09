@@ -1,7 +1,7 @@
 Flask
 flask-cors
-numpy
-scikit-learn
-tensorflow
+numpy==1.23.5
+scikit-learn==1.2.2
+tensorflow==2.12.0
 pillow
 gunicorn
